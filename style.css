@@ -1,0 +1,279 @@
+/* ==========================
+Google popins font-wt -400-500-700
+=================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap'); only for footer use */
+/* ==========================
+Common Style 
+=================================== */
+:root{
+    --hero-background:#2D25A0;
+    --button-color:#E02C6D;
+    --paragraph-color:#6C6C6C;
+
+}
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+main,footer{
+    background-color: #FAFAFA;
+}
+.container,.hero__container{
+    width:90%;
+    padding-inline: 5%;
+    padding-block: 7vh;
+}
+.d-flex{
+    display:flex;
+}
+.left,.right{
+    width:50%;
+    position:relative;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+}
+.fas{
+    padding-left:10px;
+}
+.btn{
+    padding:10px 24px;
+    background-color:var(--button-color);
+    font-size:18px;
+    color:white;
+    border-radius: 25px;
+    
+}
+p{
+    color: var(--paragraph-color);
+    font-weight: 400;
+    font-size: 16px;
+}
+.color_title{
+    color:var(--hero-background);
+}
+/* ==========================
+Hero Section Design
+=================================== */
+#hero{
+    background-color:var(--hero-background);
+    height: 100vh;
+}
+.hero__text{
+    font-weight: 700;
+    color:#ffffff;
+    font-size: 65px;
+}
+
+
+.hero__img:hover{
+    position:absolute;
+    right:10px;
+    animation: sakib 1s infinite ease-in-out;
+}
+@keyframes sakib {
+    0%{
+        right:15px;
+    }
+    50%{
+        right: 25px;
+    }
+    100%{
+        right:45px;
+    }
+}
+/* ==========================
+Card Design Section
+=================================== */
+
+.card__container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.card__item {
+    width: 300px;
+    height: 420px;
+    padding: 15px 15px 33px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 5px 16px -2px rgb(68 132 222 / 20%);
+    margin: 30px;
+    overflow: hidden;
+}
+
+.card__content p {
+    margin: 0;
+    padding: 0;
+}
+.card__content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-block: 10px;
+}
+/* ==========================
+App  Section
+=================================== */
+
+.app__img{
+    border-radius: 20px;
+}
+.app__right {
+    padding-left: 30px;
+}
+/* ==========================
+Highlight Section
+=================================== */
+.highlight__title{
+    font-size: 65px;
+    margin-block: 10px;
+}
+.highlight__left p{
+    width:70%;
+    text-align: left;
+}
+.highlight__right img{
+    border-radius: 20px;
+}
+/* ==========================
+form Design
+=================================== */
+
+.form-container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 8px 8px 18px -10px var(--paragraph-color);
+    padding-block: 40px;
+}
+.form-container,form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+button[type='submit'] {
+    border: none;
+    background-color: var(--hero-background);
+    margin-top: 20px;
+    padding: 10px 60px;
+    border-radius: 25px;
+}
+input[type="email"]{
+        width: 300px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border-color: var(--hero-background);
+        font-size: 20px;
+}
+button[type='submit'] i{
+    color:white;
+    font-size: 30px;
+}
+.form__title {
+    font-size: 60px;
+    margin-block: 20px;
+}
+.low_text{
+    font-weight: 500;
+}
+i.form_envelope {
+    font-size: 90px;
+    color: var(--hero-background);
+}
+
+/* ==========================
+footer Design
+=================================== */
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__container{
+    width:480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer__bottom__item{
+    list-style-type: none;
+    
+}
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer__bottom__list{
+    padding:0;
+}
+.footer__bottom__link{
+    color:var(--paragraph-color);
+    padding-inline: 7px;
+    font-size: 32px;
+}
+/* ==========================
+Media Queries for 688px
+=================================== */
+@media  screen and (max-width:480px) {
+    .hero__text {
+        font-size: 40px;
+    }
+    .highlight__title {
+        font-size: 40px;
+        margin-block: 25px;
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+    .left,.right{
+        width:100%;
+    }
+    .card__container {
+        grid-template-columns: 1fr;
+    }
+    section#highlight {
+        flex-direction: column-reverse;
+    }
+    .form__title {
+        font-size: 40px;
+    }
+    ul.footer__bottom_list.d-flex {
+        flex-direction: row;
+    }
+}
+/* ==========================
+Media Queries for 688px
+=================================== */
+@media  screen and (min-width:481px)and (max-width:768px) {
+    .d-flex {
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+        margin-block: 30px;
+    }
+   
+    .card__item {
+        margin: 10px;
+    }
+
+
+    .footer__bottom__nav .d-flex{
+        flex-direction: row;
+    }
+}
+@media  screen and (min-width:481px)and (max-width:1279px){
+    .card__container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
