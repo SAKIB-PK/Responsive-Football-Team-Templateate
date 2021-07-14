@@ -24,6 +24,7 @@ main,footer{
     width:90%;
     padding-inline: 5%;
     padding-block: 7vh;
+    
 }
 .d-flex{
     display:flex;
@@ -63,32 +64,24 @@ Hero Section Design
 =================================== */
 #hero{
     background-color:var(--hero-background);
-    /* height: 100vh; */
-    height: 700px;
+    min-height: 100vh;
+    
+    
 }
 .hero__text{
     font-weight: 700;
     color:#ffffff;
     font-size: 65px;
 }
-
+.hero__img{
+    transition: all 1s linear;
+}
 
 .hero__img:hover{
-    position:absolute;
-    right:10px;
-    animation: sakib 1s infinite ease-in-out;
+    
+    transform:translateX(-30px);
 }
-@keyframes sakib {
-    0%{
-        right:15px;
-    }
-    50%{
-        right: 25px;
-    }
-    100%{
-        right:45px;
-    }
-}
+
 /* ==========================
 Card Design Section
 =================================== */
@@ -271,7 +264,9 @@ Media Queries for 688px
     .card__item {
         margin: 10px;
     }
-
+    section#highlight {
+        flex-direction: column-reverse;
+    }
 
     .footer__bottom__nav .d-flex{
         flex-direction: row;
